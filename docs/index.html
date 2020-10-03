@@ -1,0 +1,578 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            #download-container1 {
+                position: absolute;
+                top:50%;
+                display: block;
+                transform: translate(0%,-50%);
+                left:0;
+                padding: 8px 16px;
+                font-family: Poppins, sans-serif;
+                width: 35%;
+            }
+            
+            #download-items1{
+                background-color: black;
+                color: white;
+                padding:12px 24px;
+                border-radius: 10px;
+                opacity: .7;
+            }
+            #download-items1:hover {
+                opacity: 1;
+            }
+            #download-items1 h1 {
+                margin: 10px 0px;
+                font-size: 24px;
+                text-align: center;
+            }
+            #download-items1 p {
+                font-size: 16px;
+                margin: 16px 0px;
+                text-align: center;
+                color: white;
+            }
+            #download-items1 hr {
+                opacity: .2;
+                padding: .3px 0px;
+                background-color: white;
+                margin: 20px 0px;
+            }
+            #download-items1 button {
+                background-color: #4caf50;
+                border: 1px solid #4caf50;
+                display: block;
+                border-radius: 5px;
+                cursor: pointer;
+                width: 100%;
+                margin: 0px auto;
+                margin-bottom: 15px;
+                color:white;
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+            #download-items1 button:hover {
+                background-color: #f1f1f1;
+                color: black;
+            }
+            header {
+                position: relative;
+            }
+            div#tour a {
+                background-color: black;
+                color: white;
+                font-size: 16px;
+                padding: 8px 16px;
+                margin-right: 16px;
+                border-radius: 6px;
+                position: absolute;
+                top:50%;
+                display: block;
+                font-family: Poppins, sans-serif;
+                transform: translate(0%,-50%);
+                cursor: pointer;
+                right:0;
+            }
+            div#tour a:hover {
+                background-color: #f1f1f1;
+                color: black;
+            }
+            
+            #section1-left  #h11 {
+                font-size: 64px;
+                margin:10px 0px;
+            }
+            #section1-left  #h12{
+                font-size: 48px;
+                color: #4caf50;
+                margin:10px 0px;
+            }
+            #section1-left span {
+                font-size: 24px;
+            }
+            #section1-left p {
+                font-size: 18px;
+                margin: 16px 0px;
+            }
+            #section1-left button {
+                font-size: 16px;
+                font-family: Poppins, sans-serif;
+                padding: 12px 24px;
+                margin: 16px 0px;
+                background-color: #f1f1f1;
+                color: black;
+                border: 1px solid #f1f1f1;
+            }
+            #section1-left button:hover {
+                background-color:darkgray;
+            }
+            #section1-right {
+                padding: 0px 8px;
+                font-family: Poppins, sans-serif;
+            }
+            
+            #section1-container {
+                padding: 64px 0px;
+            }
+            #section1 {
+                padding:0px 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+            }
+            #section1-left {  
+                padding: 0px 8px;
+                font-family: Poppins, sans-serif;
+            }
+            .grayscale {
+                filter: grayscale(50%);
+            }
+            #features {
+                padding: 64px 16px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                background-color:dimgray;
+            }
+            #features h1 {
+                font-size: 64px;
+                margin: 10px 0px;
+                font-family: Poppins, sans-serif;
+                color: white;
+            }
+            #features p {
+                font-size: 16px;
+                margin: 16px 0px;
+                font-family: Poppins, sans-serif;
+                color: white;
+            }
+            #icons-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+            #icons {
+                margin-top: 64px;
+                width: 70%;
+                flex:1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            #features i {
+                font-size: 70px;
+            }
+            #pricing {
+                padding:64px 0px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+            #pricing h1 {
+                font-size: 64px;
+                margin: 10px 0px;
+                font-family: Poppins, sans-serif;
+                color: black;
+            }
+            #pricing p {
+                font-size: 16px;
+                margin: 16px 0px;
+                font-family: Poppins, sans-serif;
+                color: black;
+            }
+            #prices-charts {
+                display: flex;
+                width: 100%;
+                justify-content: center; 
+                flex-direction: row;
+                align-items: center;
+                padding: 0px 8px;
+                margin:64px 0px 0px;
+            }
+            #chart {
+                flex: 1;
+                margin: 16px 7px;
+                box-shadow: 0px 1px 5px #888888;
+            }
+            
+            #li1 {
+                padding:32px 16px; 
+                color:white; 
+                font-size: 24px;
+                text-align: center;
+                background-color:#616161;
+            }
+            li {
+                text-align: center;
+                border: 1px solid #f1f1f1;
+                text-decoration: none;
+                list-style: none;
+                padding: 16px;
+                font-size: 17px;
+                font-family: Poppins, sans-serif;
+                color: #757575;
+            }
+            #li6 {
+                padding: 16px;
+                
+            }
+            #li6 h2 {
+                margin: 10px 0px;
+                font-size: 30px;
+                color: #757575;
+                font-family: Poppins, sans-serif;
+            }
+            
+            #li7 {
+                padding: 28px 16px;
+                background-color: #f1f1f1;
+                font-size: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #li7 button {
+                border: 1px solid white;
+                color: white;
+                background-color: black;
+                font-family: Poppins, sans-serif;
+                padding: 12px 24px;
+                
+            }
+            #li7 button:hover {
+                background-color:darkgray;
+                border: 1px solid darkgray;
+            }
+            footer {
+                padding: 32px 16px;
+                text-align: center;
+                background-color: #f1f1f1;
+                
+                color: black;
+            }
+            footer a, p {
+                font-size: 15px;
+                margin: 15px 0px;
+                color: black;
+                font-family: Poppins, sans-serif;
+            }
+            #ion{
+                font-size: 25px;
+            }
+            @media all and (max-width: 720px) {
+                #download-container1 {
+                    position: absolute;
+                    top:29;
+                    padding: 0;
+                    opacity: 1;
+                    margin: 0;
+                    display: block;
+                    width: 100%;
+                }
+                #download-items1 {
+                    padding: 0;
+                    opacity:1 ;
+                    margin: 0;
+                }
+                #download-items1 button {
+                    cursor: pointer;
+                    border-radius: 0;
+                    opacity: 1;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    width: 100%;
+                }
+                #download-items1 h1, hr, p {
+                    display: none;
+                    border: 0;
+                }
+                div#tour a {
+                    padding: 8px 16px;
+                    position: absolute;
+                    border-radius: 0;
+                    margin-right: 0;
+                    top:95.5%;
+                    width: 100%;
+                    text-align: center;
+                    display: block;
+                }
+                #section1 {
+                    padding:0px 8px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items:flex-start;
+                    flex-direction: column;
+                }
+                #section1-right {
+                    align-self: center;
+                }
+                #section1-left {
+                    width: 100%;
+                    height: auto;
+                }
+                #prices-charts { 
+                    flex-direction: column;
+                }
+                #chart {
+                    width: 90%;
+                }
+                
+            }
+        </style>
+    </head>
+
+    <body style="max-width:1500px">
+
+        <!-- header -->
+
+
+        <header>
+            <div class="slides" style="position: relative;">
+                <img src="app.jpg" style="max-width: 100%; height: auto;" width="1500">
+                <div id="download-container1">
+                    <div id="download-items1">
+                        <h1>Take photos with our app</h1>
+                        <hr>
+                        <p>Super simple installment: free of charge</p>
+                        <button>Download 
+                            <i class="fa fa-android"></i> 
+                            <i class="fa fa-apple"></i> 
+                            <i class="fa fa-windows"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slides" style="position: relative;">
+                <img src="app2.jpg" style="max-width: 100%; height: auto;" width="1500">
+                <div  id="download-container1">
+                    <div id="download-items1">
+                        <h1 style="color: #f44336;">CLICK! Fast and Easy</h1>
+                        <hr>
+                        <p>Choose from thousands of features</p>
+                        <button style="background-color: #f44336; border: 1px solid #f44336;">Download 
+                            <i class="fa fa-android"></i> 
+                            <i class="fa fa-apple"></i> 
+                            <i class="fa fa-windows"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slides" style="position: relative;">
+                <img src="app4.jpg" style="max-width: 100%; height: auto;" width="1500">
+                <div  id="download-container1">
+                    <div id="download-items1">
+                        <h1 style="color: #3f51b5;">Smart Design</h1>
+                        <hr>
+                        <p>Customize photos as you go</p>
+                        <button style="background-color: #3f51b5; border: 1px solid #3f51b5;">Download 
+                            <i class="fa fa-android"></i> 
+                            <i class="fa fa-apple"></i> 
+                            <i class="fa fa-windows"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="tour">
+                <a onclick="plusDivs(1)">Take Tour <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </header>
+
+
+
+        <!-- Section 1 -->
+
+
+
+        <div id="section1-container">
+            <div id="section1">
+                <div id="section1-left">
+                    <h1 id="h11"><b>The App</b></h1>
+                    <h1 id="h12"><b>Why buy it?</b></h1>
+                    <p><span>Take photos like a pro.</span> You should buy this app because lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <button>
+                        <i class="fa fa-download"></i> Download Application
+                    </button>
+                    <p>Available for 
+                        <i style="font-size:25px;color: #4caf50; " class="fa fa-android"></i> 
+                            <i style="font-size:25px;color: black;"class="fa fa-apple"></i> 
+                            <i style="font-size:25px;color:dodgerblue;"class="fa fa-windows"></i>
+                    </p>
+                </div>
+
+                <div id="section1-right">
+                    <img src="img_app.jpg" width="355" height="494">
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Section 2 -->
+
+        <div id="section1-container" style="background-color: #f1f1f1;">
+            <div id="section1">
+                <div id="section1-right">
+                    <img class="grayscale" style="border-radius: 10px;" src="app5.jpg" width="355" height="494">
+                </div>
+                <div id="section1-left">
+                    <h1 id="h11"><b>Clarity</b></h1>
+                    <h1 id="h12" style="color:#f44336;"><b>Pixels? who?</b></h1>
+                    <p><span>A revolution in resolution</span>  Sharp and clear photos with the world's best photo engine, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>  
+            </div>
+        </div>
+        </div>
+
+        <!-- Section 3 -->
+
+        <div id="features">
+            <h1><b>Features</b></h1>
+            <p>This app is just so lorem ipsum.</p>
+            <div id="icons-container">
+                <div id="icons">
+                    <i style="color: #ff9800;"class="fa fa-bolt"></i>
+                    <p>Fast</p>
+                </div>
+                <div id="icons">
+                    <i style="color: #f44336;"  class="fa fa-heart"></i>
+                    <p>Loved</p>
+                </div>
+                <div id="icons">
+                    <i style="color: #d2be03;"class="fa fa-camera"></i>
+                    <p>Clarity</p>
+                </div>
+                <div id="icons">
+                    <i style="color: #4caf50;"class="fa fa-battery-full "></i>
+                    <p>Power</p>
+                </div>
+            </div>
+
+            <div id="icons-container">
+                <div id="icons">
+                    <i style="color: #ff9800;"class="fa fa-diamond"></i>
+                    <p>Sharp</p>
+                </div>
+                <div id="icons">
+                    <i style="color: #2196f3;"  class="fa fa-cloud"></i>
+                    <p>Cloud</p>
+                </div>
+                <div id="icons">
+                    <i style="color: #ffc107;"class="fa fa-globe"></i>
+                    <p>Global</p>
+                </div>
+                <div id="icons">
+                    <i style="color: #00bcd4;"class="fa fa-hdd-o "></i>
+                    <p>Storage</p>
+                </div>
+            </div>
+
+            <div id="icons-container">
+                <div id="icons">
+                    <i style="color: #fdf5e6;"class="fa fa-user"></i>
+                    <p>Safe</p>
+                </div>
+                <div id="icons">
+                    <i style="color: #ff9800;"  class="fa fa-shield"></i>
+                    <p>Stabile</p>
+                </div>
+                <div id="icons">
+                    <i style="color: #757575;"class="fa fa-wifi"></i>
+                    <p> Connected</p>
+                </div>
+                <div id="icons">
+                    <i style="color: #00bcd4;"class="fa fa-image "></i>
+                    <p>HD</p>
+                </div>
+            </div>
+        </div>
+
+
+                <!-- Section 3 -->
+
+        <div id="pricing">
+            <h1><b>Pricing</b></h1>
+            <p>This app is just so lorem ipsum.</p>
+            <div id="prices-charts">
+                <div id="chart">
+                    <ul>
+                        <li id="li1"  >Basic</li>
+                        <li ><b>250</b> Photos</li>
+                        <li ><b>10</b> Features</li>
+                        <li ><b>No</b> Ads</li>
+                        <li ><b>Office</b> hours Support</li>
+                        <li id="li6">
+                            <h2>$ 25</h2>
+                        </li>
+                        <li id="li7">
+                            <button> <i class="fa fa-download"></i> Download</button>
+                        </li>
+                    </ul>
+                </div>
+                <div id="chart">
+                    <ul>
+                        <li id="li1" style="background-color:#f44336;">Premium</li>
+                        <li ><b>1000</b> Photos</li>
+                        <li ><b>50</b> Features</li>
+                        <li ><b>No</b> Ads</li>
+                        <li  ><b>Endless</b> Support</li>
+                        <li id="li6">
+                            <h2>$ 99</h2>
+                        </li>
+                        <li id="li7">
+                            <button> <i class="fa fa-download"></i> Download</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <ion-icon id="ion"name="logo-instagram"></ion-icon>
+            <ion-icon id="ion" name="logo-facebook"></ion-icon>
+            <ion-icon id="ion" name="logo-pinterest"></ion-icon>
+            <ion-icon id="ion" name="logo-snapchat"></ion-icon>
+            <ion-icon id="ion" name="logo-linkedin"></ion-icon>
+            <ion-icon id="ion" name="logo-twitter"></ion-icon>
+            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" >w3.css</a></p>
+        </footer>
+
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
+            
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("slides");
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              x[slideIndex-1].style.display = "block";  
+            }
+        </script>
+    </body>
+</html>
