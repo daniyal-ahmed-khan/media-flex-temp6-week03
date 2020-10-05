@@ -287,11 +287,10 @@
             @media all and (max-width: 720px) {
                 #download-container1 {
                     position: absolute;
-                    top:29;
+                    top:23px;
                     padding: 0;
                     opacity: 1;
                     margin: 0;
-                    display: block;
                     width: 100%;
                 }
                 #download-items1 {
@@ -299,17 +298,21 @@
                     opacity:1 ;
                     margin: 0;
                 }
+                
                 #download-items1 button {
                     cursor: pointer;
                     border-radius: 0;
                     opacity: 1;
+                    margin: 0;
                     padding-top: 15px;
                     padding-bottom: 15px;
                     width: 100%;
                 }
+                #download-items1 p {
+                    display: none;
+                }
                 #download-items1 h1, hr {
                     display: none;
-                    border: 0;
                 }
                 div#tour a {
                     padding: 8px 16px;
@@ -341,7 +344,31 @@
                 #chart {
                     width: 90%;
                 }
-                
+                #section1-left {
+                    display: flex;
+                    flex-direction: column;
+                }
+                #section1-left #h11 {
+                    order: 1;
+                }
+                #section1-left #h12 {
+                    order: 2;
+                }
+                #section1-left #p1 {
+                    order: 3;
+                }
+                #section1-left #span {
+                    order: 4;
+                }
+                #section1-left #p2 {
+                    order: 5;
+                }
+                #section1-left button {
+                    order: 6;
+                }
+                .clarity {
+                    display: none;
+                }
             }
         </style>
     </head>
@@ -416,12 +443,12 @@
                 <div id="section1-left">
                     <h1 id="h11"><b>The App</b></h1>
                     <h1 id="h12"><b>Why buy it?</b></h1>
-                    <p><span>Take photos like a pro.</span> You should buy this app because lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    <p id="p1"><span>Take photos like a pro.</span> You should buy this app because lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                         ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                     <button>
                         <i class="fa fa-download"></i> Download Application
                     </button>
-                    <p>Available for 
+                    <p id="p2">Available for 
                         <i style="font-size:25px;color: #4caf50; " class="fa fa-android"></i> 
                             <i style="font-size:25px;color: black;"class="fa fa-apple"></i> 
                             <i style="font-size:25px;color:dodgerblue;"class="fa fa-windows"></i>
@@ -440,13 +467,13 @@
 
         <div id="section1-container" style="background-color: #f1f1f1;">
             <div id="section1">
-                <div id="section1-right">
+                <div id="section1-right" class="clarity">
                     <img class="grayscale" style="border-radius: 10px;" src="app5.jpg" width="355" height="494">
                 </div>
                 <div id="section1-left">
                     <h1 id="h11"><b>Clarity</b></h1>
                     <h1 id="h12" style="color:#f44336;"><b>Pixels? who?</b></h1>
-                    <p><span>A revolution in resolution</span>  Sharp and clear photos with the world's best photo engine, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    <p id="p1"><span>A revolution in resolution</span>  Sharp and clear photos with the world's best photo engine, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                         ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </div>  
             </div>
